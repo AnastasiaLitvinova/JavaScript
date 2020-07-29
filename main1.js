@@ -10,9 +10,9 @@ while ( n <= 100) {
 
 function isNatural(number) {
     for (let i = 2; i <= number/2; i++) {
-        if (number % i == 0) {
+        if (number % i === 0) {
             return i++
         }
     }
-    return console.log(n)
+    return console.log(number)
 }
