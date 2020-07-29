@@ -8,28 +8,20 @@ function transform () {
   let arrN = n.split('') //разбить строку на массив
   let objN = {} //пустой объект
   
-  function breakUp () { //заполнение объекта свойствами и значениями
-    objN.сотни = +arrN[0]
-    objN.десятки = +arrN[1]
-    objN.единицы = +arrN[2]
-  }
-  
-  if (arrN.length > 3) {
-    console.log('Число превышает 999')
-    console.log(objN)
-  } else if (arrN.length < 3)  {
-    for (let i = 0; i < arrN.length; i++) {
-      arrN.unshift(0)
-      if (arrN.length == 3) {
-        break
-      }
-    }
-    breakUp()
-    console.log(objN)
-  } else if (arrN.length == 3) {
-      breakUp()
+  if (arrN.length != 3) {
+    if (arrN.length > 3) {
+      console.log('Число превышает 999')
       console.log(objN)
+    } else {
+      for (let i = 3; i > arrN.length; arrN.unshift(0)) {}
     }
+  }
+  if (arrN.length == 3) {
+     objN.сотни = +arrN[0]
+     objN.десятки = +arrN[1]
+     objN.единицы = +arrN[2]
+     console.log(objN)
+  }
 }
 
 transform()
