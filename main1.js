@@ -8,7 +8,7 @@ function transform () {
   let arrN = n.split('') //разбить строку на массив
   let objN = {} //пустой объект
   
-  if (arrN.length != 3) {
+  if (arrN.length !== 3) {
     if (arrN.length > 3) {
       console.log('Число превышает 999')
       console.log(objN)
@@ -16,7 +16,7 @@ function transform () {
       for (let i = 3; i > arrN.length; arrN.unshift(0)) {}
     }
   }
-  if (arrN.length == 3) {
+  if (arrN.length === 3) {
      objN.сотни = +arrN[0]
      objN.десятки = +arrN[1]
      objN.единицы = +arrN[2]
